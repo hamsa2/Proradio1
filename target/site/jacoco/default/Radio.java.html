@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Proradio</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums"><span class="fc" id="L1">public class Radio {</span>
+    public int currentVolume;
+    protected int radioStation;
+
+    public int getRadioStation() {
+<span class="fc" id="L6">        return radioStation;</span>
+    }
+
+    public void setRadioStation(int newRadioStation) {
+<span class="pc bpc" id="L10" title="3 of 4 branches missed.">        if (newRadioStation &lt; 0 &amp;&amp; newRadioStation &gt; 9) {</span>
+<span class="nc" id="L11">            System.out.println(&quot;Нет такой станции&quot;);</span>
+        } else {
+<span class="fc" id="L13">            radioStation = newRadioStation;</span>
+        }
+<span class="fc" id="L15">    }</span>
+    public void increaseVolume() {
+
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">        if (currentVolume &lt; 10) {</span>
+<span class="fc" id="L19">            currentVolume = currentVolume + 1;</span>
+        }
+<span class="fc" id="L21">    }</span>
+
+    public void decreaseVolume() {
+<span class="pc bpc" id="L24" title="1 of 2 branches missed.">        if (currentVolume &gt; 0) {</span>
+<span class="fc" id="L25">            currentVolume -= 1;</span>
+        }
+<span class="fc" id="L27">    }</span>
+
+    public void nextStation() {
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        if (radioStation == 9) {</span>
+<span class="fc" id="L31">            radioStation = 0;</span>
+        } else  {
+<span class="nc" id="L33">            radioStation = radioStation + 1;</span>
+        }
+<span class="fc" id="L35">    }</span>
+
+    public void prevStation() {
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (radioStation == 0) {</span>
+<span class="nc" id="L39">            radioStation = 9;</span>
+        } else {
+<span class="fc" id="L41">            radioStation -= 1;</span>
+        }
+<span class="fc" id="L43">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
