@@ -6,11 +6,12 @@ public class Radio {
         return radioStation;
     }
 
-    public void setRadioStation(int newRadioStation) {
-        if (newRadioStation < 0 && newRadioStation > 9) {
-            System.out.println("Нет такой станции");
+    public void setRadioStation(int radioStation) {
+        if (radioStation >= 0 && radioStation <= 9) {
+            this.radioStation = radioStation;
         } else {
-            radioStation = newRadioStation;
+            System.out.println("err");
+
 
         }
     }

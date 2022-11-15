@@ -53,6 +53,7 @@ public class RadioTest {
 
 
     }
+
     @Test
     public void checkPrevStation2() {
         Radio radio4 = new Radio();
@@ -64,13 +65,54 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void checkSetRadioStation() {
         Radio radio5 = new Radio();
-        radio5.setRadioStation(5);
-        int expected = 5;
+        radio5.setRadioStation(9);
+        int expected = 9;
         int actual = radio5.getRadioStation();
 
         Assertions.assertEquals(expected, actual);
+
     }
+
+    @Test
+    public void checkPrevStation3() {
+        Radio radio7 = new Radio();
+        radio7.setRadioStation(0);
+        radio7.prevStation();
+
+        int expected = 9;
+        int actual = radio7.getRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkSetRadioStation6() {
+        Radio radio6 = new Radio();
+        radio6.setRadioStation(11);
+        int expected = 0;
+        int actual = radio6.getRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void checkSetRadioStation8() {
+        Radio radio6 = new Radio();
+        radio6.setRadioStation(-2);
+        int expected = 0;
+        int actual = radio6.getRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
 }
+
+
+
+
