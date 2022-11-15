@@ -11,8 +11,10 @@ public class Radio {
             System.out.println("Нет такой станции");
         } else {
             radioStation = newRadioStation;
+
         }
     }
+
     public void increaseVolume() {
 
         if (currentVolume < 10) {
@@ -31,12 +33,14 @@ public class Radio {
             radioStation++;
         }
         radioStation = 0;
-        }
+    }
 
     public void prevStation() {
         if (radioStation > 0) {
-        }
-        radioStation = 9;
+            radioStation--;
+        } else {
+            radioStation = 9;
         }
     }
+}
 
