@@ -30,7 +30,7 @@ public class RadioTest {
     @Test
     public void checkNextStation() {
         Radio radio2 = new Radio();
-        radio2.setRadioStation(9);
+        radio2.setRadioStation(8);
         radio2.nextStation();
 
         int expected = 0;

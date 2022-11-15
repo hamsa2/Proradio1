@@ -27,19 +27,16 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (radioStation == 9) {
-            radioStation = 0;
-        } else  {
-            radioStation = radioStation + 1;
+        if (radioStation < 9) {
+            radioStation++;
         }
-    }
+        radioStation = 0;
+        }
 
     public void prevStation() {
-        if (radioStation == 0) {
-            radioStation = 9;
-        } else {
-            radioStation -= 1;
+        if (radioStation > 0) {
+        }
+        radioStation = 9;
         }
     }
-}
 
