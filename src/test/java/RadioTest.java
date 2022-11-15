@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
@@ -47,6 +48,28 @@ public class RadioTest {
 
         int expected = 8;
         int actual = radio3.getRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+
+
+    }
+    @Test
+    public void checkPrevStation2() {
+        Radio radio4 = new Radio();
+        radio4.setRadioStation(1);
+        radio4.prevStation();
+
+        int expected = 0;
+        int actual = radio4.getRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void checkSetRadioStation() {
+        Radio radio5 = new Radio();
+        radio5.setRadioStation(5);
+        int expected = 5;
+        int actual = radio5.getRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
